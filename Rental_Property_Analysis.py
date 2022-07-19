@@ -52,13 +52,21 @@ class ROI():
         cash_on_cash = (self.flow / self.return_investment) * 1000
         print(f"Your ROI for this property is {cash_on_cash}%")
 
-    
+    def one_rule(self):
+        one_percent_rule = self.price * .01
+        print(one_percent_rule)
+        if one_percent_rule <= self.gross:
+            print("This property passes the 1 percent rule!")
+        else:
+            print("This property does not pass the 1 percent rule")
+
 
 h1 = ROI(0,0,0,0,0)
 h1.income()
 h1.expances()
 h1.cash_flow()
 h1.return_on_investment()
+h1.one_rule()
 
 
 # Here I was trying to create a seprate class for the 1% rule. 
